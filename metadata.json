@@ -1,0 +1,8 @@
+{
+  "name": "《直播与融媒主持》课程智慧赋分系统",
+  "description": "A training platform for hosting and live-streaming skills, featuring AI pronunciation evaluation, live-streaming simulation, and impromptu challenges.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
