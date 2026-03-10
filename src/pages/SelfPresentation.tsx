@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, ChangeEvent } from 'react';
 import { motion } from 'motion/react';
 import { Upload, FileVideo, CheckCircle2, AlertCircle, Play, Users, BarChart3, Clock, Star } from 'lucide-react';
 
@@ -32,7 +32,7 @@ export function SelfPresentation() {
   const [submittedCount, setSubmittedCount] = useState(142); // Mock submitted count
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 

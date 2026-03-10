@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, ChangeEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Users, Heart, AlertTriangle, Play, Square, ShoppingBag, ChevronRight, Upload, Video as VideoIcon, CheckCircle, BarChart, Star, X } from 'lucide-react';
 
@@ -371,7 +371,7 @@ export function LiveStreaming() {
     }
   };
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       const url = URL.createObjectURL(file);

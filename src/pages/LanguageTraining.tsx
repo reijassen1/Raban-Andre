@@ -368,12 +368,13 @@ export function LanguageTraining() {
                   />
                 )}
                 {dynamicFeedbacks.map((fb, idx) => (
-                  <FeedbackItem 
-                    key={idx}
-                    type={fb.type} 
-                    title={fb.title}
-                    text={fb.text} 
-                  />
+                  <div key={idx}>
+                    <FeedbackItem 
+                      type={fb.type} 
+                      title={fb.title}
+                      text={fb.text} 
+                    />
+                  </div>
                 ))}
                 
                 <div className="mt-6 pt-4 border-t border-neutral-800">
@@ -414,7 +415,13 @@ function MetricCard({ icon: Icon, label, value, desc, color, bg }: any) {
   );
 }
 
-function FeedbackItem({ type, title, text }: { type: 'success' | 'warning', title: string, text: string }) {
+interface FeedbackItemProps {
+  type: 'success' | 'warning';
+  title: string;
+  text: string;
+}
+
+function FeedbackItem({ type, title, text }: FeedbackItemProps) {
   return (
     <div className="flex items-start gap-3 bg-neutral-900/50 p-3.5 rounded-xl border border-neutral-800">
       {type === 'success' ? (
